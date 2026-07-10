@@ -10,14 +10,15 @@
 
         <!-- Nav Links (Desktop) -->
         <div class="hidden md:flex items-center space-x-1">
-            {% assign nav_items = "首页|/|机场|/airport/|评测|/review/|教程|/tutorial/|下载|/download/|FAQ|/faq/|博客|/blog/" | split: "|" %}
-            {% for i in (0..nav_items.size) %}
-                {% if nav_items[i] %}
-                    <a href="{{ nav_items[i] | relative_url }}" 
-                       class="px-3 py-2 text-sm rounded-lg transition-all duration-200 {% if page.url == nav_items[i] %}text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10{% else %}text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5{% endif %}">
-                        {{ nav_items[i-1] }}
-                    </a>
-                {% endif %}
+            {% assign nav_names = "首页|机场|评测|教程|下载|FAQ|博客" | split: "|" %}
+            {% assign nav_urls = "/|/airport/|/review/|/tutorial/|/download/|/faq/|/blog/" | split: "|" %}
+            {% for item in nav_names %}
+                {% assign url = nav_urls[forloop.index0] %}
+                {% assign current = page.url %}
+                <a href="{{ url | relative_url }}" 
+                   class="px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 {% if current == url %}text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10{% else %}text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5{% endif %}">
+                    {{ item }}
+                </a>
             {% endfor %}
         </div>
 
