@@ -1,0 +1,69 @@
+# ─── 一元机场导航 - Jekyll Config ───
+
+title: 一元机场导航
+tagline: 精选高性价比机场推荐、Clash订阅、机场评测与网络加速知识
+description: >-
+  一元机场导航 - 专注分享一元机场推荐、一元机场评测、便宜机场、高性价比机场、
+  Clash订阅、Clash节点等内容。导航站+教程站+评测站+资源站。
+url: "https://1yuanjichang.github.io"
+baseurl: ""
+
+# ─── 社交 ───
+author: 一元机场导航
+logo: /assets/images/logo.svg
+social:
+  name: 一元机场导航
+  links:
+    - https://github.com/1yuanjichang
+
+# ─── 主题设置 ───
+timezone: Asia/Shanghai
+lang: zh-CN
+markdown: kramdown
+highlighter: rouge
+
+# ─── 插件（github-pages 已内置） ───
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+# ─── 分页 ───
+paginate: 8
+paginate_path: "/blog/page:num/"
+
+# ─── 默认 Front Matter ───
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "一元机场导航"
+      toc: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# ─── Feed / RSS ───
+feed:
+  path: /feed.xml
+
+# ─── 包含目录 ───
+include:
+  - .well-known
+
+# ─── 排除 ───
+exclude:
+  - README.md
+  - package.json
+  - tailwind.config.js
+  - node_modules
+  - scripts/
+  - prompts/
+  - Gemfile.lock
+  - vendor
