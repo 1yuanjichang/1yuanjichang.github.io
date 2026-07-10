@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#162e94"/>
+    </linearGradient>
+    <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3370ff"/>
+      <stop offset="50%" style="stop-color:#5994ff"/>
+      <stop offset="100%" style="stop-color:#0bc99d"/>
+    </linearGradient>
+    <linearGradient id="trailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0bc99d;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#0bc99d;stop-opacity:0.6"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3370ff;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#3370ff;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#bgGrad)"/>
+
+  <!-- Glow effect -->
+  <circle cx="256" cy="256" r="180" fill="url(#glowGrad)"/>
+
+  <!-- Outer ring - network/signal representation -->
+  <g transform="translate(256,256)" fill="none" stroke="#3370ff" stroke-width="2" opacity="0.3">
+    <circle r="120" stroke-dasharray="8 12"/>
+    <circle r="160" stroke-dasharray="4 16" opacity="0.5"/>
+  </g>
+
+  <!-- Data arcs (right side) -->
+  <g transform="translate(256,256)" fill="none" stroke-width="2.5">
+    <path d="M 100 0 Q 140 -40 160 -80" stroke="#0bc99d" opacity="0.5" stroke-linecap="round"/>
+    <path d="M 100 0 Q 150 -20 180 -40" stroke="#5994ff" opacity="0.4" stroke-linecap="round"/>
+    <path d="M 80 60 Q 120 80 150 110" stroke="#3370ff" opacity="0.35" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small data dots -->
+  <g fill="#5994ff" opacity="0.6">
+    <circle cx="370" cy="160" r="3"/>
+    <circle cx="400" cy="200" r="2.5"/>
+    <circle cx="340" cy="280" r="2"/>
+    <circle cx="380" cy="300" r="3"/>
+    <circle cx="360" cy="350" r="2.5"/>
+  </g>
+
+  <!-- Airplane icon (centered) -->
+  <g transform="translate(246,250)" filter="url(#glow)">
+    <!-- Fuselage -->
+    <ellipse cx="10" cy="0" rx="28" ry="6" fill="url(#planeGrad)" transform="rotate(5)"/>
+
+    <!-- Wings -->
+    <path d="M -5 -2 L -25 -18 L -22 -16 L -8 -4 Z" fill="#5994ff" opacity="0.9"/>
+    <path d="M -5 2 L -25 18 L -22 16 L -8 4 Z" fill="#5994ff" opacity="0.9"/>
+
+    <!-- Right wing (upper) -->
+    <path d="M 5 -2 L 25 -16 L 28 -14 L 10 -4 Z" fill="#3370ff" opacity="0.8"/>
+    <path d="M 5 2 L 25 16 L 28 14 L 10 4 Z" fill="#3370ff" opacity="0.8"/>
+
+    <!-- Tail fin -->
+    <path d="M -30 -1 L -40 -12 L -38 -11 L -28 -3 Z" fill="#0bc99d" opacity="0.8"/>
+    <path d="M -30 1 L -40 12 L -38 11 L -28 3 Z" fill="#0bc99d" opacity="0.8"/>
+
+    <!-- Cockpit window -->
+    <ellipse cx="32" cy="-1" rx="4" ry="3.5" fill="#0bc99d" opacity="0.6"/>
+
+    <!-- Engine exhaust trail -->
+    <path d="M -38 0 Q -50 0 -65 -2" stroke="url(#trailGrad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M -36 2 Q -48 3 -60 1" stroke="url(#trailGrad)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Speed lines -->
+  <g stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-linecap="round" opacity="0.5">
+    <line x1="180" y1="235" x2="210" y2="237"/>
+    <line x1="185" y1="260" x2="210" y2="258"/>
+    <line x1="190" y1="248" x2="215" y2="247"/>
+  </g>
+
+  <!-- Subtle highlight on bottom -->
+  <ellipse cx="256" cy="440" rx="100" ry="8" fill="#3370ff" opacity="0.08"/>
+</svg>

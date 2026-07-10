@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" width="600" height="140">
+  <defs>
+    <linearGradient id="logoPlaneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3370ff"/>
+      <stop offset="50%" style="stop-color:#5994ff"/>
+      <stop offset="100%" style="stop-color:#0bc99d"/>
+    </linearGradient>
+    <linearGradient id="logoTextGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#b0c4ff"/>
+    </linearGradient>
+    <linearGradient id="logoSubGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5994ff"/>
+      <stop offset="100%" style="stop-color:#0bc99d"/>
+    </linearGradient>
+    <linearGradient id="trailFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0bc99d;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#0bc99d;stop-opacity:0.7"/>
+    </linearGradient>
+    <filter id="logoGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Airplane icon -->
+  <g transform="translate(20, 20)" filter="url(#logoGlow)">
+    <!-- Glow background -->
+    <ellipse cx="50" cy="50" rx="45" ry="45" fill="#3370ff" opacity="0.08"/>
+
+    <!-- Fuselage -->
+    <ellipse cx="50" cy="50" rx="38" ry="8" fill="url(#logoPlaneGrad)" transform="rotate(5, 50, 50)"/>
+
+    <!-- Main wings (left/back) -->
+    <path d="M 35 46 L 8 30 L 12 32 L 33 44 Z" fill="#5994ff" opacity="0.85"/>
+    <path d="M 35 54 L 8 70 L 12 68 L 33 56 Z" fill="#5994ff" opacity="0.85"/>
+
+    <!-- Front wings -->
+    <path d="M 45 46 L 70 32 L 74 34 L 50 44 Z" fill="#3370ff" opacity="0.75"/>
+    <path d="M 45 54 L 70 68 L 74 66 L 50 56 Z" fill="#3370ff" opacity="0.75"/>
+
+    <!-- Tail fin -->
+    <path d="M 15 49 L 2 35 L 5 36 L 17 47 Z" fill="#0bc99d" opacity="0.8"/>
+    <path d="M 15 51 L 2 65 L 5 64 L 17 53 Z" fill="#0bc99d" opacity="0.8"/>
+
+    <!-- Cockpit -->
+    <ellipse cx="82" cy="49" rx="5" ry="4.5" fill="#0bc99d" opacity="0.5"/>
+
+    <!-- Exhaust trail -->
+    <path d="M 10 50 Q -5 49 -20 48" stroke="url(#trailFade)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 12 52 Q -3 53 -15 51" stroke="url(#trailFade)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Orbital ring -->
+    <ellipse cx="50" cy="50" rx="24" ry="24" fill="none" stroke="#3370ff" stroke-width="1.5" opacity="0.2"
+             stroke-dasharray="6 8" transform="rotate(-20, 50, 50)"/>
+
+    <!-- Small orbital dots -->
+    <circle cx="72" cy="32" r="2" fill="#0bc99d" opacity="0.5"/>
+    <circle cx="28" cy="68" r="2" fill="#5994ff" opacity="0.5"/>
+  </g>
+
+  <!-- Text: 一元机场导航 -->
+  <g transform="translate(120, 10)">
+    <!-- Main title -->
+    <text x="0" y="58" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+          font-size="42" font-weight="700" fill="url(#logoTextGrad)" letter-spacing="4">
+      一元机场导航
+    </text>
+
+    <!-- Subtitle -->
+    <text x="2" y="86" font-family="'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+          font-size="16" font-weight="400" fill="url(#logoSubGrad)" letter-spacing="6" opacity="0.8">
+      YIYUAN NETWORK
+    </text>
+
+    <!-- Underline accent -->
+    <rect x="0" y="96" width="60" height="2" rx="1" fill="url(#logoSubGrad)" opacity="0.6"/>
+    <rect x="66" y="96" width="20" height="2" rx="1" fill="url(#logoPlaneGrad)" opacity="0.3"/>
+  </g>
+</svg>
