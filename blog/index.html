@@ -77,7 +77,7 @@ breadcrumb:
       {% elsif page == 1 %}
       <a href="{{ '/blog/' | relative_url }}" class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">{{ page }}</a>
       {% else %}
-      <a href="{{ '/blog/page:' | append: page | append: '/' | relative_url }}" class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">{{ page }}</a>
+      <a href="{{ '/blog/page' | append: page | append: '/' | relative_url }}" class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">{{ page }}</a>
       {% endif %}
       {% endfor %}
 
