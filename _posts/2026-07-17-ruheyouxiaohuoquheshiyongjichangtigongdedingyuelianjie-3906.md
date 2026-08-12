@@ -19,7 +19,7 @@ Dler Cloud 测评：曾经的顶级机场之一，至今依然稳
 
 Dler Cloud 算是老牌机场里口碑一直在线的那一类，早些年就以节点质量高、线路稳定著称。现在虽然没"
 ---
-![Clash节点推荐](https://clashjd.github.io/assets/img/节点订阅地址.png)
+![Clash节点推荐](/img/%E8%8A%82%E7%82%B9%E8%AE%A2%E9%98%85%E5%9C%B0%E5%9D%80.png)
 
 <h2>如何有效获取和使用机场提供的订阅链接？</h2>
 机场名称：Dler Cloud

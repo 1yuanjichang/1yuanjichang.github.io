@@ -18,7 +18,7 @@ description: "如何有效管理 Clash 记录浏览记录与节点使用
 FATCAT（肥猫云）- 性价比中转机场，多入口负载测评
 FATCAT（肥猫云）整体给我的感觉就是那种“价格不贵、路子比较稳”的中转机场。站点界面不花哨，"
 ---
-![Clash节点推荐](https://clashjd.github.io/assets/img/机场节点购买.png)
+![Clash节点推荐](/img/%E6%9C%BA%E5%9C%BA%E8%8A%82%E7%82%B9%E8%B4%AD%E4%B9%B0.png)
 
 <h2>如何有效管理 Clash 记录浏览记录与节点使用</h2>
 机场名称：FATCAT（肥猫云）
