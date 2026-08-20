@@ -219,11 +219,9 @@
     const popupCloseBtn = document.getElementById('popupCloseBtn');
 
     // 页面加载完成后显示弹窗
+    // 页面加载后立即显示弹窗，优先级最高
     window.addEventListener('DOMContentLoaded', function() {
-      // 延迟 500ms 显示，效果更自然
-      setTimeout(() => {
-        popupOverlay.classList.add('show');
-      }, 500);
+      popupOverlay.classList.add('show');
     });
 
     // 关闭按钮：关闭弹窗并新窗口打开用户商城
