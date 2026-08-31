@@ -92,7 +92,8 @@
     padding: 20px 30px;
     border-radius: 12px;
     max-width: 100%;
-    width: 370px;
+    width: 50%;
+    max-width: 500px;
     text-align: center;
     position: relative;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -155,8 +156,8 @@
   /* 移动端适配 */
   @media (max-width: 768px) {
     .popup-content {
-      width: 95%;
-      max-width: 320px;
+      width: 40%;
+      max-width: 350px;
       padding: 15px 20px;
     }
 
@@ -197,7 +198,7 @@
     window.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         popupOverlay.classList.add('show');
-      }, 600);
+      }, 300);
     });
 
 
